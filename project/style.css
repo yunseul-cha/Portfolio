@@ -1,4 +1,4 @@
-/*  Global  */
+/* Global  */
 :root {
   /* Color */
   --color-white: #ffffff;
@@ -107,7 +107,7 @@ p {
 
 #navbar.navbar--dark {
   background-color: var(--color-pink);
-  padding: 4px;
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -117,6 +117,7 @@ p {
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  color: white;
 }
 
 .navbar__menu__item {
@@ -194,7 +195,7 @@ p {
 .major__icon {
   width: 170px;
   height: 170px;
-  line-height: 170px;
+
   font-size: 80px;
   margin: auto;
   border: 1px solid var(--color-blue);
@@ -205,6 +206,7 @@ p {
 
 .major__icon i {
   transition: var(--animation-duration);
+  line-height: 170px;
 }
 
 .major__icon:hover i {
@@ -401,7 +403,7 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 
 .project__description h3:after {
@@ -409,9 +411,9 @@ p {
   display: block;
   position: relative;
   left: 50%;
-  width: 25px;
+  width: 50px;
   height: 2px;
-  margin-left: -12px;
+  transform: translateX(-50%);
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
@@ -513,7 +515,12 @@ p {
 
   #navbar {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    background-color: var(--color-pink);
+  }
+
+  #navbar.navbar--dark {
+    padding: 16px;
   }
 
   .navbar__menu {
@@ -523,11 +530,15 @@ p {
     display: none;
   }
 
+  .navbar__menu.open {
+    display: block;
+  }
+
   .about__majors {
     flex-direction: column;
   }
   .major {
-    margin: 38px;
+    margin-bottom: 38px;
   }
 
   .skillset {
